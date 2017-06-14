@@ -21,5 +21,11 @@ pipeline {
         tool 'Maven'
       }
     }
+    stage('run') {
+      steps {
+        bat 'cd target'
+        bat 'java -jar gs-maven-0.1.0.jar'
+      }
+    }
   }
 }
