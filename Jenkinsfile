@@ -10,6 +10,7 @@ pipeline {
           },
           "Check": {
             bat 'mvn -version'
+            bat 'dir'
             
           }
         )
