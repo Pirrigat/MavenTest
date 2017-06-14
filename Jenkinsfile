@@ -3,7 +3,17 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        git(url: 'https://github.com/Pirrigat/MavenTest.git', branch: 'master')
+        parallel(
+          "Checkout": {
+            git(url: 'https://github.com/Pirrigat/MavenTest.git', branch: 'master')
+            
+          },
+          "Check": {
+            sh '''mvn -version
+echo "Hello"'''
+            
+          }
+        )
       }
     }
     stage('Build') {
