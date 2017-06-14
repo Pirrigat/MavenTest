@@ -9,8 +9,7 @@ pipeline {
             
           },
           "Check": {
-            sh '''mvn -version
-echo "Hello"'''
+            bat 'mvn -version'
             
           }
         )
