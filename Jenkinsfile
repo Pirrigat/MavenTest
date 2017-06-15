@@ -20,7 +20,7 @@ pipeline {
           },
           "Check": {
 		  
-            sh '''
+            bat '''
 				echo "Git is now checked out!"
 			   '''
             
@@ -30,14 +30,14 @@ pipeline {
     }
     stage('Build') {
       steps {
-        sh '''
+        bat '''
 			mvm clean package
 		   '''
       }
     }
     stage('run') {
       steps {
-        sh '''
+        bat '''
 			java -jar gs-maven-0.1.0.jar
 		   '''
       }
