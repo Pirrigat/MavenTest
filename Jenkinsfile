@@ -36,17 +36,12 @@ pipeline {
       }
     }
     stage('run') {
-    try {
-
       steps {
-        sh '''
+        bat '''
 			cd target
 			java -jar gs-maven-0.1.0.jar
 		'''
       }			      
-    } catch (err) {
-	    bat ''' echo "Fail '''
-    }
     }
   }
 }
