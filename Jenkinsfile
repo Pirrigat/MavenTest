@@ -47,5 +47,6 @@ pipeline {
     } catch (err) {
 	    bat ''' echo "Fail '''
     }
+    }
   }
 }
