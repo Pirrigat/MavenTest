@@ -44,7 +44,7 @@ pipeline {
 			java -jar gs-maven-0.1.0.jar
 		'''
       }			      
-    } cath (err) {
+    } catch (err) {
 	    bat ''' echo "Fail '''
     }
   }
