@@ -31,7 +31,7 @@ pipeline {
     stage('Build') {
       steps {
         bat '''
-			mvm clean package
+			mvn clean package
 		   '''
       }
     }
