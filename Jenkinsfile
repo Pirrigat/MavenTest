@@ -21,7 +21,6 @@ pipeline {
           "Check": {
 		  
             sh '''
-				dir 
 				echo "Git is now checked out!"
 			   '''
             
