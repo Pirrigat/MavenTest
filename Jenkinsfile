@@ -43,5 +43,10 @@ pipeline {
 		'''
       }			      
     }
+  stage('run2') {
+      steps {
+        build 'Test2'
+      }			      
+    }
   }
 }
